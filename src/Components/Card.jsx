@@ -12,14 +12,14 @@ const Card = ({ data}) => {
     setFavs([
       ...favs,
       data,
-    ]) 
+    ]);
+    alert("se ha agregado a favoritos exitosamente");
   };
 
   return (
     <div className="card">
         {/* En cada card deberan mostrar en name - username y el id */}
         <Link to={`/detail/${data.id}`} key={data.id} className ="card-link" >
-        <h3>{data.id}</h3>
         <img src= "./images/doctor.jpg" alt="Img-Doc" className="Img-Doc"/>
         <h4>{data.name}</h4>
         <h5>{data.username}</h5>
